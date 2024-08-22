@@ -30,7 +30,24 @@ let score = 75;
 let machineActive = false;
 
 // Add your code here
-
+ if (machineActive == "true") {
+        prompt(response == 'Game Start!');
+        if (score < 0 || score > 100) {
+            prompt(response == "This is not possible, an error has occured.");
+        } else if (score >= 0 || score < 20) {
+            prompt(response == "That was a terrible score - total fail!");
+        } else if (score > 19 || score < 40) {
+            prompt(response == "You know some things, but it\'s a pretty bad score. Needs improvement.");
+        } else if (score > 39 || score < 70) {
+            prompt(response == "You did a passale job, not bad.");
+        } else if (score > 69 || score < 90) {
+            prompt(response == "That\'s a great score. you really know your stuff.");
+        } else if (score > 89 || score <= 100) {
+            prompt(response == "What an amazing score! Did you cheat? Are you for real?");
+        }
+    } else if (machineActive == "false") {
+        prompt(response == 'Initiate Game');
+    }
 // Don't edit the code below here!
 
 section.innerHTML = ' ';
